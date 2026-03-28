@@ -1,0 +1,87 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8"> <!-- biar semua huruf kebaca dengan benar -->
+    <title>sistem nilai mahasiswa</title> <!-- judul di tab browser -->
+    <link rel="stylesheet" href="style.css"> <!-- menghubungkan ke file css -->
+</head>
+<body>
+
+<div class="container"> <!-- pembungkus semua isi -->
+
+    <!-- bagian atas (judul dan info) -->
+    <div class="header">
+        <h2>NILAI MAHASISWA</h2> <!-- judul utama -->
+
+        <div class="info"> <!-- info dibagi jadi kiri dan kanan -->
+            <div>
+                <p>MATA KULIAH : PEMROGRAMAN WEB</p> <!-- nama matkul -->
+                <p>SEMESTER : 4 / GENAP / A</p> <!-- info semester -->
+                <p>DOSEN : RESKI MAI CANDRA, S.T., M.Sc</p> <!-- nama dosen -->
+            </div>
+            <div>
+                <p>SKS : 4</p> <!-- jumlah sks -->
+                <p>HARI/WAKTU : SENIN/13.00</p> <!-- jadwal -->
+                <p>RUANG : FST301</p> <!-- ruang -->
+            </div>
+        </div>
+    </div>
+
+    <!-- tabel nilai mahasiswa -->
+    <table id="tabel">
+        <thead>
+            <tr>
+                <th>NO</th> <!-- nomor -->
+                <th>NAMA</th> <!-- nama mahasiswa -->
+                <th>TUGAS MANDIRI</th>
+                <th>TUGAS TERSTRUKTUR</th>
+                <th>UTS</th>
+                <th>UAS</th>
+                <th>NILAI AKHIR</th>
+                <th>SKS</th>
+                <th>NILAI</th>
+                <th>BOBOT</th>
+                <th>B×K</th>
+            </tr>
+        </thead>
+
+        <tbody id="bodyTabel"> <!-- isi data -->
+
+            <!-- data awal mahasiswa -->
+            <tr>
+                <td>1</td> <!-- nomor -->
+                <td onclick="opsiNama(event, this)">ISHNA NURFAUZIAH</td> <!-- klik untuk ubah/hapus -->
+                <td><input class="tm"></td> <!-- input nilai -->
+                <td><input class="tt"></td>
+                <td><input class="uts"></td>
+                <td><input class="uas"></td>
+                <td class="na"></td> <!-- hasil nilai akhir -->
+                <td class="sks">4</td> <!-- sks -->
+                <td class="grade"></td> <!-- huruf nilai -->
+                <td class="bobot"></td> <!-- bobot -->
+                <td class="bk"></td> <!-- bobot x sks -->
+            </tr>
+
+            <!-- baris lainnya sama -->
+        </tbody>
+    </table>
+
+    <!-- form tambah mahasiswa -->
+    <div class="form">
+        <input type="text" id="namaBaru" placeholder="Nama Mahasiswa"> <!-- input nama -->
+        <button onclick="tambahBaris()">Tambah</button> <!-- tambah baris -->
+        <button onclick="hitungSemua()">Hitung</button> <!-- hitung nilai -->
+    </div>
+
+</div>
+
+<script src="script.js"></script> <!-- hubungkan ke js -->
+
+<!-- menu kecil saat klik nama -->
+<div id="menuAksi" class="menu-aksi hidden">
+    <button onclick="renameNama()">Rename</button> <!-- ubah nama -->
+    <button onclick="hapusBaris()">Delete</button> <!-- hapus -->
+</div>
+
+</body>
+</html>
