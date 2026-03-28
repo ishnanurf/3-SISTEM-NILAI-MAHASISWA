@@ -1,0 +1,114 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8"> <!-- supaya semua karakter bisa terbaca -->
+    <title>sistem nilai mahasiswa</title> <!-- judul di tab browser -->
+    <link rel="stylesheet" href="style.css"> <!-- menghubungkan file css -->
+</head>
+<body>
+
+<div class="container"> <!-- pembungkus utama semua isi -->
+
+    <!-- header -->
+    <div class="header"> <!-- bagian atas halaman -->
+        <h2>NILAI MAHASISWA</h2> <!-- judul utama -->
+
+        <div class="info"> <!-- pembungkus info kiri dan kanan -->
+            <div>
+                <p>MATA KULIAH : PEMROGRAMAN WEB</p> <!-- info mata kuliah -->
+                <p>SEMESTER : 4 / GENAP / A</p> <!-- info semester -->
+                <p>DOSEN : RESKI MAI CANDRA, S.T., M.Sc</p> <!-- nama dosen -->
+            </div>
+            <div>
+                <p>SKS : 4</p> <!-- jumlah sks -->
+                <p>HARI/WAKTU : SENIN/13.00</p> <!-- jadwal -->
+                <p>RUANG : FST301</p> <!-- ruang -->
+            </div>
+        </div>
+    </div>
+
+    <!-- tabel -->
+    <table id="tabel"> <!-- tabel utama -->
+        <thead>
+            <tr> <!-- baris header -->
+                <th>NO</th> <!-- kolom nomor -->
+                <th>NAMA</th> <!-- kolom nama -->
+                <th>TUGAS MANDIRI</th> <!-- nilai tugas mandiri -->
+                <th>TUGAS TERSTRUKTUR</th> <!-- nilai tugas terstruktur -->
+                <th>UTS</th> <!-- nilai uts -->
+                <th>UAS</th> <!-- nilai uas -->
+                <th>NILAI AKHIR</th> <!-- hasil rata-rata -->
+                <th>SKS</th> <!-- jumlah sks -->
+                <th>NILAI</th> <!-- nilai huruf -->
+                <th>BOBOT</th> <!-- bobot nilai -->
+                <th>B×K</th> <!-- bobot x sks -->
+            </tr>
+        </thead>
+
+        <tbody id="bodyTabel"> <!-- isi data tabel -->
+
+            <!-- data awal -->
+            <tr> <!-- baris mahasiswa 1 -->
+                <td>1</td> <!-- nomor -->
+                <td onclick="opsiNama(event, this)">ISHNA NURFAUZIAH</td> <!-- klik untuk rename/delete -->
+                <td><input class="tm"></td> <!-- input tugas mandiri -->
+                <td><input class="tt"></td> <!-- input tugas terstruktur -->
+                <td><input class="uts"></td> <!-- input uts -->
+                <td><input class="uas"></td> <!-- input uas -->
+                <td class="na"></td> <!-- nilai akhir -->
+                <td class="sks">4</td> <!-- sks -->
+                <td class="grade"></td> <!-- nilai huruf -->
+                <td class="bobot"></td> <!-- bobot -->
+                <td class="bk"></td> <!-- bobot x sks -->
+            </tr>
+
+            <tr> <!-- baris mahasiswa 2 -->
+                <td>2</td>
+                <td onclick="opsiNama(event, this)">RAMEISYA AULIA</td>
+                <td><input class="tm"></td>
+                <td><input class="tt"></td>
+                <td><input class="uts"></td>
+                <td><input class="uas"></td>
+                <td class="na"></td>
+                <td class="sks">4</td>
+                <td class="grade"></td>
+                <td class="bobot"></td>
+                <td class="bk"></td>
+            </tr>
+
+            <tr> <!-- baris mahasiswa 3 -->
+                <td>3</td>
+                <td onclick="opsiNama(event, this)">KHALIFIYAH SYALSA KURNIA</td>
+                <td><input class="tm"></td>
+                <td><input class="tt"></td>
+                <td><input class="uts"></td>
+                <td><input class="uas"></td>
+                <td class="na"></td>
+                <td class="sks">4</td>
+                <td class="grade"></td>
+                <td class="bobot"></td>
+                <td class="bk"></td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <!-- input tambah -->
+    <div class="form"> <!-- form tambah mahasiswa -->
+        <input type="text" id="namaBaru" placeholder="Nama Mahasiswa"> <!-- input nama -->
+        <button onclick="tambahBaris()">Tambah</button> <!-- tombol tambah -->
+        <button onclick="hitungSemua()">Hitung</button> <!-- tombol hitung -->
+    </div>
+
+</div>
+
+<script src="script.js"></script> <!-- menghubungkan javascript -->
+
+<!-- menu aksi (rename & delete) -->
+<div id="menuAksi" class="menu-aksi hidden"> <!-- menu popup -->
+    <button onclick="renameNama()">Rename</button> <!-- ubah nama -->
+    <button onclick="hapusBaris()">Delete</button> <!-- hapus baris -->
+</div>
+
+</body>
+</html>

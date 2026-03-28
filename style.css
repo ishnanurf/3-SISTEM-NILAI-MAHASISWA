@@ -1,0 +1,163 @@
+body {
+    font-family: 'Times New Roman', Times, serif; /* jenis font */
+    background: #360101; /* warna background */
+    margin: 0; 
+}
+
+/* container */
+.container {
+    width: 95%; /* lebar container */
+    margin: auto; /* posisi tengah */
+    background: #d1b883; /* warna background container */
+    padding: 15px; /* jarak dalam */
+    border-radius: 12px; /* sudut melengkung */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* bayangan */
+}
+
+/* header merah */
+.header {
+    background: #350101; /* warna header */
+    color: rgb(255, 253, 253); /* warna teks */
+    padding: 20px; /* jarak dalam */
+}
+
+.header h2 {
+    text-align: center; /* judul di tengah */
+    margin-bottom: 10px; /* jarak bawah */
+}
+
+/* info kiri kanan */
+.info {
+    display: flex; /* pakai flexbox */
+    justify-content: space-between; /* kiri dan kanan */
+}
+
+/* tabel lebih modern */
+table {
+    width: 100%; /* lebar penuh */
+    border-collapse: collapse; /* biar garis nyatu */
+    border-spacing: 0;
+    margin-top: 15px; /* jarak atas */
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid black; /* border luar */
+}
+
+/* header */
+th {
+    background: linear-gradient(to right, #210F00, #3E120A, #5a020f); /* warna gradasi */
+    color: white; /* warna teks */
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* isi tabel */
+td {
+    background: #fff; /* warna isi */
+    padding: 8px;
+    text-align: center;
+    transition: 0.2s; /* efek halus */
+}
+
+/* garis halus */
+td, th {
+    border-bottom: 1px solid #131212; /* garis bawah */
+    padding: 8px;
+    text-align: center;
+    border: 2px solid black; /* garis utama tabel */
+}
+
+/* zebra effect */
+tr:nth-child(even) td {
+    background: #fff5f5; /* warna selang-seling */
+}
+
+/* hover row */
+tr:hover td {
+    background: #ffe0e0; /* efek hover */
+}
+
+/* input lebih clean */
+td input {
+    width: 55px; /* lebar input */
+    padding: 4px;
+    border-radius: 5px;
+    border: 1px solid #0a0a0a;
+    text-align: center;
+}
+
+/* focus input */
+td input:focus {
+    outline: none;
+    border: 1px solid #561d1d;
+    box-shadow: 0 0 3px #561d1d;
+}
+
+tr:hover td {
+    background: #ffd6d6; /* hover tambahan */
+}
+
+/* form bawah */
+.form {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.form input {
+    padding: 8px;
+}
+
+.form button {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+/* menu kecil rename delete */
+.menu-aksi {
+    position: absolute; /* posisi bebas */
+    background: rgb(2, 27, 22);
+    border: 1px solid #ccc;
+    padding: 7px;
+    border-radius: 10px;
+    z-index: 999;
+}
+
+/* tombol di menu */
+.menu-aksi button {
+    display: block;
+    width: 100%;
+    margin: 7px 0;
+    background: #a8fcfc;
+    border: #0a0101;
+    cursor: pointer;
+}
+
+/* sembunyiin */
+.hidden {
+    display: none;
+}
+
+/* tombol menu aksi */
+.menu-aksi button {
+    display: block;
+    width: 100%;
+    margin: 4px 0;
+    padding: 6px;
+    background: #eee;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* hover rename */
+.menu-aksi button:first-child:hover {
+    background: #4caf50;
+    color: white;
+}
+
+/* hover delete */
+.menu-aksi button:last-child:hover {
+    background: #e53935;
+    color: white;
+}
